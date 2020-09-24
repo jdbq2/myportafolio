@@ -1,0 +1,77 @@
+@import "../../styles.scss";
+
+.showproject {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border: 5px solid;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+  @include respond-to(desktop) {
+    max-width: 45%;
+  }
+  &__title {
+    font-family: $primaryFont;
+    font-size: map-get($fs, xs);
+    font-weight: 700;
+    text-decoration: underline;
+    text-align: center;
+  }
+  &__image {
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__text {
+    font-family: $secondaryFont;
+    font-size: 180%;
+    text-align: center;
+    width: 95%;
+    margin-top: 15px;
+  }
+  &__tecnologies {
+    font-family: $secondaryFont;
+    font-size: 180%;
+    text-align: center;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    & li {
+      margin: 10px;
+      border-bottom: 1px solid;
+      border-left: 1px solid;
+      border-radius: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
+      font-weight: 500;
+    }
+  }
+  &__buttoncontainer {
+    display: flex;
+    &__button {
+      padding: 10px;
+      border-radius: 10px;
+      margin: 10px;
+      border: 1px solid;
+      text-decoration: none;
+      text-align: center;
+      font-family: $secondaryFont;
+      font-size: 180%;
+      color: inherit;
+      transition: transform 0.4s ease-in-out;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}

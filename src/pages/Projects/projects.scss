@@ -1,0 +1,28 @@
+@import "../../styles.scss";
+.projects {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__title {
+    font-family: $primaryFont;
+    font-size: 320%;
+    font-weight: 700;
+    @include respond-to(tablet) {
+      font-size: map-get($fs, s);
+    }
+  }
+  &__text {
+    font-family: $secondaryFont;
+    font-size: map-get($fs, xs);
+    text-align: center;
+    margin-top: 20px;
+    max-width: 90%;
+  }
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px;
+    justify-content: center;
+  }
+}

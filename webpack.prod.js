@@ -6,6 +6,8 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 var HtmlWebpackPlugin = require("html-webpack-plugin");
+const webpack = require("webpack");
+const autoprefixer = require("autoprefixer");
 
 module.exports = merge(common, {
   mode: "production",
@@ -32,6 +34,11 @@ module.exports = merge(common, {
       filename: "styles.[contentHash].css",
     }),
     new CleanWebpackPlugin(),
+    new webpack.LoaderOptionsPlugin({
+      options: {
+        postcss: [autoprefixer()],
+      },
+    }),
   ],
   module: {
     rules: [
@@ -40,6 +47,7 @@ module.exports = merge(common, {
         use: [
           MiniCssExtractPlugin.loader, //3. Extract css into files
           "css-loader", //2. Turns css into commonjs
+          "postcss-loader",
           "sass-loader", //1. Turns sass into css
         ],
       },

@@ -3,6 +3,7 @@ import gsap from "gsap";
 import HeroSvg from "../../assets/svg/HeroSvg/heroSvg";
 import { AiOutlineGithub, AiFillLinkedin } from "react-icons/ai";
 import { GrMail } from "react-icons/gr";
+import Head from "../../components/Head/Head";
 import "./home.scss";
 
 const Home = () => {
@@ -40,6 +41,10 @@ const Home = () => {
   }, []);
   return (
     <div className="home">
+      <Head
+        pageTitle="Home"
+        description="Pagina de inicio del portafolio de Juan Diego Bohorquez, desarrollador frontend"
+      />
       <div className="home__hero">
         <div className="home__hero__title">
           <h1 ref={(el) => (title = el)} className="home__hero__title__name">
@@ -56,7 +61,7 @@ const Home = () => {
       <div className="home__socialmedia">
         <a
           ref={(el) => (github = el)}
-          href=""
+          href="https://github.com/jdbq2"
           target="_blank"
           className="home__socialmedia__icon"
         >
@@ -66,7 +71,7 @@ const Home = () => {
         </a>
         <a
           ref={(el) => (linkedin = el)}
-          href=""
+          href="https://www.linkedin.com/in/juan-diego-bohorquez-a47255b1/"
           target="_blank"
           className="home__socialmedia__icon"
         >

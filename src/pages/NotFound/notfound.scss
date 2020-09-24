@@ -1,0 +1,19 @@
+@import "../../styles.scss";
+
+.notfound {
+  width: 90%;
+  min-height: 75vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  &__title {
+    font-family: $primaryFont;
+    font-size: map-get($fs, s);
+    text-align: center;
+  }
+  &__image {
+    width: 100%;
+    height: 100%;
+  }
+}
