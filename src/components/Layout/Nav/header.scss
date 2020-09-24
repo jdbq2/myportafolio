@@ -1,14 +1,21 @@
 @import "../../../styles.scss";
 .header {
-  width: 100%;
-  padding: 15px;
+  width: 90%;
+  padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  overflow: hidden;
+  @include respond-to(desktop) {
+    padding: 0px 10px 0 10px;
+  }
   &__theme {
-    font-size: map-get($fs, m);
+    font-size: map-get($fs, s);
     background-color: transparent;
-    padding: 5px;
     border: none;
+    cursor: pointer;
+    &:focus {
+      outline-color: $third;
+    }
   }
 }

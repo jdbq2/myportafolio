@@ -1,28 +1,89 @@
 @import "../../styles.scss";
 
 .home {
-  padding: 20px;
-  margin-top: 20px;
+  width: 100%;
+  min-height: 80vh;
+  padding: 15px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  &__title {
-    border-left: 5px solid $third;
-    padding-left: 10px;
-    &__name {
-      font-family: $primaryFont;
-      font-size: map-get($fs, xl);
-      overflow-wrap: break-word;
-      word-wrap: break-word;
-      font-weight: 900;
+  @include respond-to(phone) {
+    width: 90%;
+  }
+  &__hero {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include respond-to(phone) {
+      width: 90%;
     }
-    &__job {
-      font-family: $secondaryFont;
-      font-size: map-get($fs, m);
-      font-weight: 500;
-      overflow-wrap: break-word;
-      word-wrap: break-word;
-      margin-top: -25px;
+    @include respond-to(desktop) {
+      flex-direction: initial;
+      justify-content: space-evenly;
+    }
+    &__title {
+      border-left: 5px solid $third;
+      padding-left: 10px;
+      @include respond-to(desktop) {
+        height: 50%;
+      }
+      &__name {
+        font-family: $primaryFont;
+        font-size: map-get($fs, m);
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        font-weight: 900;
+        @include respond-to(tablet) {
+          font-size: map-get($fs, l);
+        }
+        @include respond-to(desktop) {
+          font-size: 750%;
+        }
+      }
+      &__job {
+        font-family: $secondaryFont;
+        font-size: 200%;
+        font-weight: 500;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        margin-top: -25px;
+        @include respond-to(tablet) {
+          font-size: map-get($fs, s);
+        }
+        @include respond-to(desktop) {
+          font-size: map-get($fs, xs);
+        }
+        @include respond-to(xl) {
+          font-size: map-get($fs, s);
+        }
+      }
+    }
+    &__image {
+      width: 100%;
+      padding: 15px;
+      @include respond-to(tablet) {
+        width: 80%;
+      }
+      @include respond-to(desktop) {
+        width: 50%;
+      }
+    }
+  }
+  &__socialmedia {
+    margin: 10px;
+    font-size: map-get($fs, m);
+    display: flex;
+    &__icon {
+      margin: 15px;
+      color: inherit;
+      transition: transform 0.2s ease-in-out;
+
+      &:hover {
+        transform: scale(1.5) rotate(-10deg);
+      }
     }
   }
 }

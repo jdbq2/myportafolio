@@ -1,0 +1,16 @@
+@import "../../../styles.scss";
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  text-align: center;
+  font-size: 110%;
+  font-family: $primaryFont;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}

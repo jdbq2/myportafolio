@@ -26,6 +26,7 @@ const Menu = () => {
       setDisabled(false);
     }, 1000);
   };
+
   useEffect(() => {
     const tl = gsap.timeline();
     clicked
@@ -63,7 +64,8 @@ const Menu = () => {
           duration: 0.3,
           ease: "power3.inOut",
           rotate: "-45deg",
-        }))
+        }),
+        (document.getElementsByTagName("html")[0].style.overflow = "hidden"))
       : (tl.to([projectLink, bioLink, homeLink], {
           duration: 0.5,
           ease: "Circ.inOut",
@@ -98,7 +100,8 @@ const Menu = () => {
           duration: 0.3,
           ease: "power3.inOut",
           rotate: "0deg",
-        }));
+        }),
+        (document.getElementsByTagName("html")[0].style.overflow = "auto"));
   }, [clicked]);
   return (
     <nav className="menu">
@@ -141,7 +144,7 @@ const Menu = () => {
           }}
           onClick={showMenu}
         >
-          <Link to="/">Home</Link>
+          <Link to="/">Inicio</Link>
         </li>
         <li
           ref={(e) => {
@@ -149,7 +152,7 @@ const Menu = () => {
           }}
           onClick={showMenu}
         >
-          <Link to="/bio">Bio</Link>
+          <Link to="/sobremi">Sobre mi</Link>
         </li>
         <li
           ref={(e) => {
@@ -157,7 +160,7 @@ const Menu = () => {
           }}
           onClick={showMenu}
         >
-          <Link to="/projects">Projects</Link>
+          <Link to="/proyectos">Proyectos</Link>
         </li>
       </ul>
     </nav>

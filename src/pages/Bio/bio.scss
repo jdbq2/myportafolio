@@ -1,0 +1,76 @@
+@import "../../styles.scss";
+.sobremi {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__title {
+    font-family: $primaryFont;
+    font-size: map-get($fs, s);
+    font-weight: 700;
+  }
+  &__info {
+    font-family: $secondaryFont;
+    font-size: map-get($fs, xs);
+    text-align: center;
+    padding: 10px;
+    & span {
+      font-weight: 900;
+    }
+  }
+  &__slogan {
+    font-family: $primaryFont;
+    font-size: map-get($fs, xs);
+    text-align: center;
+    padding: 20px;
+    & a {
+      color: inherit;
+    }
+    @include respond-to(tablet) {
+      font-size: map-get($fs, s);
+    }
+  }
+  &__tecnologies {
+    font-family: $primaryFont;
+    font-size: map-get($fs, s);
+    text-align: center;
+  }
+  &__data {
+    width: 90%;
+
+    &__container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+      &__name {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &__icon {
+          font-size: map-get($fs, m);
+        }
+        &__title {
+          font-size: map-get($fs, xs);
+          text-align: center;
+        }
+      }
+      &__bar {
+        width: 100%;
+        height: max-content;
+        border: 2px solid;
+        border-radius: 10px;
+        overflow: hidden;
+        &__percent {
+          font-size: map-get($fs, xs);
+          text-align: end;
+          background-color: $fourth;
+          font-weight: 400;
+          padding: 10px;
+        }
+      }
+    }
+  }
+}
