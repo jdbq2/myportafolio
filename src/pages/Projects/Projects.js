@@ -58,8 +58,8 @@ const Projects = () => {
       ],
       text:
         "Diseño 100% responsive, animaciones realizadas con Gsap, manejo de rutas con React router, incluye manejo de errores, implementacion de estilos por medio de Sass bajo metodologia BEM. incluye tambien el Uso de React Hooks. El bundle final fue realizado por medio de webpack, haciendo uso de Babel y demas plugins.",
-      codeLink: "#",
-      liveLink: "#",
+      codeLink: "https://github.com/jdbq2/myportafolio",
+      liveLink: "https://jdbq2.github.io/myportafolio/#/",
     },
   ];
 
