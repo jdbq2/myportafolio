@@ -4,6 +4,10 @@ Proyecto creado con el fin de mostrar mi trabajo como frontend developer, realiz
 
 [![](https://jdbq2.github.io/myportafolio/assets/portafolio.29fe84211388dfd08968330d2e196e51.png)](http://https://jdbq2.github.io/myportafolio/assets/portafolio.29fe84211388dfd08968330d2e196e51.png)
 
+### Instalar
+
+    npm run install
+
 ### Dependencias:
 
 - React
